@@ -2,6 +2,8 @@
 
 > &#34;I&#39;m just your friendly neighborhood web developer&#34;. -Sean Kennedy
 
+https://seriouslysean.github.io/codeserious/
+
 ## Build Setup
 
 ``` bash
@@ -20,3 +22,4 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
