@@ -1,0 +1,53 @@
+{
+  "name": "codeserious",
+  "description": "&#34;I&#39;m just your friendly neighborhood web developer&#34;. -Sean Kennedy",
+  "version": "1.0.0",
+  "author": "Sean Kennedy",
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "@nuxtjs/dotenv": "^1.4.0",
+    "@nuxtjs/pwa": "^3.0.0-0",
+    "@nuxtjs/sentry": "^3.0.1",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^1.0.1",
+    "@nuxtjs/eslint-module": "^1.0.0",
+    "@nuxtjs/stylelint-module": "^3.1.0",
+    "@vue/test-utils": "^1.0.0-beta.27",
+    "babel-eslint": "^10.0.1",
+    "babel-jest": "^24.1.0",
+    "eslint": "^6.1.0",
+    "eslint-config-prettier": "^4.1.0",
+    "eslint-plugin-nuxt": ">=0.4.2",
+    "eslint-plugin-prettier": "^3.0.1",
+    "frontmatter-markdown-loader": "^3.1.0",
+    "husky": "^2.6.0",
+    "jest": "^24.1.0",
+    "lint-staged": "^8.2.1",
+    "prettier": "^1.16.4",
+    "push-dir": "^0.4.1",
+    "stylelint": "^10.1.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "vue-jest": "^4.0.0-0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js,vue}": "eslint"
+  },
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt",
+    "generate": "nuxt generate",
+    "github:build": "DEPLOY_ENV=GH_PAGES nuxt build",
+    "github:generate": "DEPLOY_ENV=GH_PAGES nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
+    "start": "nuxt start",
+    "test": "jest"
+  }
+}
