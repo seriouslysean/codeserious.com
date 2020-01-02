@@ -1,69 +1,111 @@
 <template>
   <div class="container">
-    <div>
-      <logo />
-      <h1 class="title">
-        codeserious
-      </h1>
-      <h2 class="subtitle">
-        &#34;I&#39;m just your friendly neighborhood web developer.&#34; -Sean
-        Kennedy
-      </h2>
-      <div class="links">
-        <a href="https://nuxtjs.org/" target="_blank" class="button--green">
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
+    <h1 class="title">code<i class="title__half">serious</i></h1>
+
+    <div class="links">
+      <a
+        class="links__link"
+        title="Facebook"
+        href="https://www.facebook.com/seriouslysean"
+        >Facebook</a
+      >
+      <a
+        class="links__link"
+        title="Twitter"
+        href="https://www.twitter.com/seriouslysean"
+        >Twitter</a
+      >
+      <a
+        class="links__link"
+        title="GitHub"
+        href="https://www.github.com/seriouslysean"
+        >GitHub</a
+      >
+      <a
+        class="links__link"
+        title="LinkedIn"
+        href="https://www.linkedin.com/in/seriouslysean"
+        >LinkedIn</a
+      >
     </div>
   </div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue';
-
 export default {
-  components: {
-    Logo,
+  components: {},
+  head() {
+    return {
+      title: 'Sean Kennedy, Developer',
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: 'description',
+          name: 'description',
+          content:
+            '&#34;I&#39;m just your friendly neighborhood web developer&#34;. -Sean Kennedy',
+        },
+      ],
+    };
   },
 };
 </script>
 
-<style>
+<style lang="scss">
+body {
+  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  color: #00151a;
+  background: #cef4fe;
+}
+
+a {
+  color: #02657f;
+  text-decoration: none;
+
+  &:active,
+  &:visited,
+  &:hover {
+    color: #00151a;
+    text-decoration: underline;
+  }
+}
+
 .container {
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
 
 .title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
+  text-transform: uppercase;
+  color: #00151a;
+  font-size: 3em;
+  margin-bottom: 1em;
 
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
+  &__half {
+    color: #02657f;
+    font-style: normal;
+  }
 }
 
 .links {
-  padding-top: 15px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item {
+    display: inline;
+    margin: 0;
+    padding: 0;
+  }
+
+  &__link {
+    display: inline-block;
+    margin: 0 0.5em 1em;
+  }
 }
 </style>
