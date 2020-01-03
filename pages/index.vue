@@ -43,7 +43,7 @@ export default {
           hid: 'description',
           name: 'description',
           content:
-            '&#34;I&#39;m just your friendly neighborhood web developer&#34;. -Sean Kennedy',
+            '"I\'m just your friendly neighborhood web developer". -Sean Kennedy',
         },
       ],
     };
