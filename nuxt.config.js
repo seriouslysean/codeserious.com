@@ -62,7 +62,10 @@ export default {
    */
   sentry: {
     dsn: 'https://a145cec8de1b4d19a9974be3f61fa675@sentry.io/1870571',
-    config: {},
+    config: {
+      environment:
+        process.env.NODE_ENV !== 'production' ? 'development' : 'production',
+    },
   },
   /*
    ** Build configuration
