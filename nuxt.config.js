@@ -2,7 +2,8 @@ import path from 'path';
 import Mode from 'frontmatter-markdown-loader/mode';
 
 export default {
-  mode: 'spa',
+  ssr: false,
+  target: 'static',
   /*
    ** Headers of the page
    */
