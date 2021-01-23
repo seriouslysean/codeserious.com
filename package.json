@@ -1,54 +1,30 @@
 {
-  "name": "codeserious",
-  "description": "\"I'm just your friendly neighborhood web developer\". -Sean Kennedy",
-  "version": "1.0.1",
-  "author": "Sean Kennedy",
-  "dependencies": {
-    "@nuxtjs/axios": "^5.12.2",
-    "@nuxtjs/dotenv": "^1.4.1",
-    "@nuxtjs/pwa": "^3.0.2",
-    "@nuxtjs/sentry": "^4.3.4",
-    "nuxt": "^2.14.4"
+  "name": "codeserious.com",
+  "version": "1.1.0",
+  "description": "Website for codeserious.com",
+  "homepage": "https://github.com/seriouslysean/codeserious.com#readme",
+  "bugs": {
+    "url": "https://github.com/seriouslysean/codeserious.com/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/seriouslysean/codeserious.com.git"
+  },
+  "license": "MIT",
+  "author": "Sean Kennedy <sean@codeserious.com>",
+  "main": "README.md",
+  "scripts": {
+    "build": "eleventy",
+    "deploy": "npm run build && cp CNAME dist/CNAME && push-dir --dir=dist --branch=gh-pages --cleanup",
+    "dev": "eleventy --serve",
+    "lint": "eslint . --ext .js",
+    "lint:fix": "eslint . --ext .js --fix",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "@nuxtjs/eslint-config": "^5.0.0",
-    "@nuxtjs/eslint-module": "^3.0.1",
-    "@nuxtjs/stylelint-module": "^4.0.0",
-    "@vue/test-utils": "^1.0.5",
-    "babel-eslint": "^10.1.0",
-    "babel-jest": "^26.3.0",
-    "eslint": "^7.8.1",
-    "eslint-config-prettier": "^6.11.0",
-    "eslint-plugin-nuxt": ">=1.0.0",
-    "eslint-plugin-prettier": "^3.1.4",
-    "frontmatter-markdown-loader": "^3.6.0",
-    "husky": "^4.3.0",
-    "jest": "^26.4.2",
-    "lint-staged": "^10.3.0",
-    "node-sass": "^4.14.1",
-    "prettier": "^2.1.1",
-    "push-dir": "^0.4.1",
-    "sass-loader": "^10.0.2",
-    "stylelint": "^13.7.0",
-    "stylelint-config-recommended": "^3.0.0",
-    "vue-jest": "^4.0.0-beta.5"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "*.{js,vue}": "eslint"
-  },
-  "private": true,
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt",
-    "generate": "nuxt generate",
-    "deploy": "npm run generate && cp CNAME dist/CNAME && push-dir --dir=dist --branch=gh-pages --cleanup",
-    "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
-    "start": "nuxt start",
-    "test": "jest"
+    "@11ty/eleventy": "^0.11.1",
+    "eslint": "^7.18.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "push-dir": "^0.4.1"
   }
 }
