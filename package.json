@@ -1,0 +1,40 @@
+{
+	"name": "codeserious.com",
+	"version": "2.0.0",
+	"description": "Website for codeserious.com.",
+	"scripts": {
+		"build": "npx @11ty/eleventy",
+		"deploy": "npm run build && cp CNAME _site/CNAME && push-dir --dir=_site --branch=gh-pages --cleanup",
+		"start": "npx @11ty/eleventy --serve --quiet",
+		"debug": "DEBUG=Eleventy* npx @11ty/eleventy",
+		"debugstart": "DEBUG=Eleventy* npx @11ty/eleventy --serve --quiet",
+		"benchmark": "DEBUG=Eleventy:Benchmark* npx @11ty/eleventy"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/seriouslysean/codeserious.com.git"
+	},
+	"author": {
+		"name": "Sean Kennedy",
+		"email": "sean@codeserious.com",
+		"url": "https://www.codeserious.com"
+	},
+	"license": "MIT",
+	"engines": {
+		"node": ">=16"
+	},
+	"bugs": {
+	  "url": "https://github.com/seriouslysean/codeserious.com/issues"
+	},
+	"homepage": "https://github.com/seriouslysean/codeserious.com#readme",
+	"devDependencies": {
+		"@11ty/eleventy": "^2.0.1",
+		"@11ty/eleventy-img": "^3.1.1",
+		"@11ty/eleventy-navigation": "^0.3.5",
+		"@11ty/eleventy-plugin-bundle": "^1.0.4",
+		"@11ty/eleventy-plugin-rss": "^1.2.0",
+		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+		"luxon": "^3.3.0",
+		"markdown-it-anchor": "^8.6.7"
+	}
+}
