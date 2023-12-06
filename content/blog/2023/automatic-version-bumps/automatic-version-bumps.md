@@ -1,6 +1,6 @@
 ---
 title: Automating Version Bumps using GitHub Actions
-description: Successfully bumped a repo's version automaticall from both a normal and forked PR merge event to main.
+description: Successfully bumped a repo's version automatically from both a normal and forked PR merge event to main.
 date: 2023-12-04
 tags:
     - github
