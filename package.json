@@ -24,7 +24,7 @@
 		"node": ">=16"
 	},
 	"bugs": {
-	  "url": "https://github.com/seriouslysean/codeserious.com/issues"
+		"url": "https://github.com/seriouslysean/codeserious.com/issues"
 	},
 	"homepage": "https://github.com/seriouslysean/codeserious.com#readme",
 	"devDependencies": {
@@ -35,6 +35,7 @@
 		"@11ty/eleventy-plugin-rss": "^1.2.0",
 		"@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
 		"luxon": "^3.3.0",
-		"markdown-it-anchor": "^8.6.7"
+		"markdown-it-anchor": "^8.6.7",
+		"push-dir": "^0.4.1"
 	}
 }
