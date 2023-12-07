@@ -6,35 +6,19 @@
 
 /* Theme colors */
 :root {
-	--color-gray-20: #e0e0e0;
-	--color-gray-50: #C0C0C0;
-	--color-gray-90: #333;
+	--background-color: #1a1a1a;
 
-	--background-color: #fff;
+	--color-gray-20: #cccccc;
+	--color-gray-50: #999999;
+	--color-gray-90: #cccccc;
 
 	--text-color: var(--color-gray-90);
-	--text-color-link: #082840;
-	--text-color-link-active: #5f2b48;
-	--text-color-link-visited: #17050F;
+	--text-color-link: #63cc9f;
+	--text-color-link-active: #4fa077;
+	--text-color-link-visited: #63cc9f;
 
 	--syntax-tab-size: 2;
 }
-
-@media (prefers-color-scheme: dark) {
-	:root {
-		--color-gray-20: #e0e0e0;
-		--color-gray-50: #C0C0C0;
-		--color-gray-90: #dad8d8;
-
-		/* --text-color is assigned to --color-gray-_ above */
-		--text-color-link: #1493fb;
-		--text-color-link-active: #6969f7;
-		--text-color-link-visited: #a6a6f8;
-
-		--background-color: #15202b;
-	}
-}
-
 
 /* Global stylesheet */
 * {
@@ -200,23 +184,14 @@ header {
 /* Posts list */
 .postlist {
 	list-style: none;
+	list-style-type: none;
 	padding: 0;
-	padding-left: 1.5rem;
 }
 .postlist-item {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: baseline;
-	counter-increment: start-from -1;
 	margin-bottom: 1em;
-}
-.postlist-item:before {
-	display: inline-block;
-	pointer-events: none;
-	content: "" counter(start-from, decimal-leading-zero) ". ";
-	line-height: 100%;
-	text-align: right;
-	margin-left: -1.5rem;
 }
 .postlist-date,
 .postlist-item:before {
@@ -230,8 +205,6 @@ header {
 	font-size: 1.1875em; /* 19px /16 */
 	font-weight: 700;
 	flex-basis: calc(100% - 1.5rem);
-	padding-left: .25em;
-	padding-right: .5em;
 	text-underline-position: from-font;
 	text-underline-offset: 0;
 	text-decoration-thickness: 1px;
