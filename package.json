@@ -1,6 +1,6 @@
 {
 	"name": "codeserious.com",
-	"version": "2.1.0",
+	"version": "2.1.1",
 	"description": "Website for codeserious.com.",
 	"scripts": {
 		"_clean": "rimraf _site/*",
